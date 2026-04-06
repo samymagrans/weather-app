@@ -1,0 +1,86 @@
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.forecast-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.forecast-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.forecast-day {
+  display: grid;
+  grid-template-columns: 48px 48px 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background var(--transition);
+  border-radius: var(--radius-sm);
+}
+
+.forecast-day:last-child {
+  border-bottom: none;
+}
+
+.forecast-day:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fd-day {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.fd-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.fd-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fd-pop {
+  min-width: 44px;
+  text-align: right;
+}
+
+.fd-pop-value {
+  font-size: 0.8rem;
+  color: #90caf9;
+  font-weight: 500;
+}
+
+.fd-temps {
+  display: flex;
+  gap: 10px;
+  min-width: 110px;
+  justify-content: flex-end;
+}
+
+.fd-high {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.fd-low {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}

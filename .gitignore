@@ -1,0 +1,16 @@
+# Markdown files
+*.md
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+!.env.example
+
+# Misc
+.DS_Store
+*.log

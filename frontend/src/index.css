@@ -1,0 +1,67 @@
+/* Base reset and global styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-start: #1565c0;
+  --bg-end: #1e88e5;
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --accent: rgba(255, 255, 255, 0.9);
+  --input-bg: rgba(255, 255, 255, 0.15);
+  --input-border: rgba(255, 255, 255, 0.3);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --transition: 0.25s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color-scheme: dark;
+}
+
+/* Dynamic weather backgrounds via data attribute */
+[data-weather="clear"]       { --bg-start: #1565c0; --bg-end: #42a5f5; }
+[data-weather="clouds"]      { --bg-start: #455a64; --bg-end: #78909c; }
+[data-weather="rain"]        { --bg-start: #283593; --bg-end: #5c6bc0; }
+[data-weather="drizzle"]     { --bg-start: #37474f; --bg-end: #607d8b; }
+[data-weather="thunderstorm"]{ --bg-start: #1a237e; --bg-end: #37474f; }
+[data-weather="snow"]        { --bg-start: #37474f; --bg-end: #90a4ae; }
+[data-weather="mist"],
+[data-weather="smoke"],
+[data-weather="haze"],
+[data-weather="fog"]         { --bg-start: #546e7a; --bg-end: #78909c; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  background-attachment: fixed;
+  color: var(--text-primary);
+  transition: background var(--transition);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img {
+  display: block;
+}

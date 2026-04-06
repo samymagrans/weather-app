@@ -1,0 +1,44 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(211, 47, 47, 0.25);
+  border: 1px solid rgba(239, 83, 80, 0.5);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(239, 83, 80, 0.7);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.error-text {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.error-dismiss {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 4px;
+  transition: color var(--transition);
+  flex-shrink: 0;
+}
+
+.error-dismiss:hover {
+  color: #fff;
+}
